@@ -1,33 +1,8 @@
 import React, { FunctionComponent } from "react"
-import { graphql, StaticQuery, Link } from "gatsby"
-import { WPMenuItems, WPMenuItem } from "src/typings/QueryProps.interface"
-import styled from "styled-components"
+import { graphql, StaticQuery } from "gatsby"
+import { WPMenuMainMenuItem, WPMenuMainMenuItems } from "src/typings/QueryProps.interface"
+import { MainMenuWrapper, MenuItem } from "./MainMenu.styles";
 
-const MainMenuWrapper = styled.div`
-  display: flex;
-  /* background-color: rgb(3, 27, 77); */
-`
-const MenuItem = styled(Link)`
-  color: white;
-  display: block;
-  padding: 8px 16px;
-  transition: 250ms font-size;
-  font-size: 1.5em;
-  text-decoration: none;
-  &:after {
-    content: '';
-    background-color: white;
-    display: block;
-    height: 1px;
-    width: 0px;
-    transition: 250ms width;
-  }
-  &:hover {
-    &:after {
-      width: 100%;
-    }
-  }
-`
 const MainMenu: FunctionComponent<{}> = () => (
   <StaticQuery
     query={graphql`
@@ -47,10 +22,10 @@ const MainMenu: FunctionComponent<{}> = () => (
         }
       }
     `}
-    render={(props: WPMenuItems) => (
+    render={(props: WPMenuMainMenuItems) => (
       <MainMenuWrapper>
         {props.allWordpressWpApiMenusMenusItems.edges[0].node.items.map(
-          (item: WPMenuItem) => (
+          (item: WPMenuMainMenuItem) => (
             <MenuItem to={item.object_slug} key={item.title}>
               {item.title}
             </MenuItem>

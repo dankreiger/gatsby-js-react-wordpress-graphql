@@ -1,7 +1,7 @@
 import * as React from "react"
 import renderer from "react-test-renderer"
 
-import Page from "../page"
+import Page from "../Page/Page"
 
 describe("Page", () => {
   it("renders correctly", () => {
