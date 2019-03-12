@@ -1,9 +1,41 @@
 {
   "name": "gatsby-starter-default",
+  "version": "0.1.0",
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
+  "keywords": [
+    "gatsby"
+  ],
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "license": "MIT",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx,tsx}",
+    "serve": "gatsby serve",
+    "sort": "sort-package-json",
+    "start": "npm run develop",
+    "test": "jest"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts,tsx,jsx,json,css}": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
+  },
   "dependencies": {
     "babel-plugin-styled-components": "1.10.0",
     "bluebird": "3.5.3",
@@ -19,43 +51,35 @@
     "gatsby-source-filesystem": "^2.0.22",
     "gatsby-source-wordpress": "3.0.38",
     "gatsby-transformer-sharp": "^2.1.14",
+    "he": "1.2.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-helmet": "^5.2.0",
+    "react-icons": "3.5.0",
+    "react-slick": "0.23.2",
+    "react-youtube": "7.9.0",
+    "slick-carousel": "1.8.1",
     "styled-components": "4.1.3"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
+    "@types/he": "1.1.0",
     "@types/jest": "24.0.9",
+    "@types/react-slick": "0.23.3",
     "@types/react-test-renderer": "16.8.1",
+    "@types/react-youtube": "7.6.1",
     "@types/styled-components": "4.1.11",
     "babel-jest": "24.1.0",
     "babel-preset-gatsby": "0.1.8",
+    "husky": "1.3.1",
     "identity-obj-proxy": "3.0.0",
     "jest": "24.1.0",
-    "prettier": "^1.16.4",
+    "lint-staged": "8.1.5",
+    "prettier": "1.16.4",
     "react-test-renderer": "16.8.3",
+    "sort-package-json": "1.21.0",
     "ts-jest": "24.0.0",
     "typescript": "3.3.3333"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write src/**/*.{js,jsx,tsx}",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }

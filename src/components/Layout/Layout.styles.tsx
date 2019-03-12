@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components"
+import styled, { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyles = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou');
@@ -37,7 +37,4 @@ export const LayoutWrapper = styled.div`
   padding-left: 15px;
   padding-right: 15px;
   margin-top: 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 `

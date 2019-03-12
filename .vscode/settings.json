@@ -1,0 +1,8 @@
+{
+  "emmet.includeLanguages": {
+    "javascript": "typescriptreact"
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true
+  },
+}
