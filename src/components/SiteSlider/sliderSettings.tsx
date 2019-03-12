@@ -12,6 +12,7 @@ export const sliderSettings = (
 ) => ({
   dots: true,
   arrows: true,
+  lazyLoad: 'progressive',
   infinite: true,
   speed: 500,
   slidesToShow: 1,

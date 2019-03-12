@@ -1,11 +1,9 @@
 import styled from 'styled-components'
 
 export const VideoFrameLoading = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: translateY(50%) !important;
-  z-index: 1;
+  position: fixed;
+  top: 50%;
+  left: 50%;
 `
 export const ResponsiveIframeContainer = styled.div`
   position: relative;

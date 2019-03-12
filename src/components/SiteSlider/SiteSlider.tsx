@@ -13,6 +13,7 @@ interface SiteSliderProps {
 }
 
 const SiteSlider: FunctionComponent<SiteSliderProps> = ({ videoIds }) => {
+  console.log('videoIds', videoIds)
   const [videoPlaying, setVideoPlaying] = useState({ stopVideo: () => null })
   const onPlay = (e: any) => {
     setVideoPlaying(e.target)
